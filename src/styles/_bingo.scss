@@ -1,0 +1,22 @@
+body {
+    background: $navy;
+}
+
+.bingo {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5,1fr);
+    .card {
+        background: $blue;
+        height: 20vh;
+        width: 20vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:nth-child(odd) {
+            background: $lightBlue;
+        }
+        color: $white;
+        font-size: 1.8rem;
+    }
+ }
