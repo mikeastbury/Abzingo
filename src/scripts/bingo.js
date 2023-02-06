@@ -5,6 +5,8 @@ const allAnswers = [
     "Shut it off",
     "Jon Sr.",
     "Schwarzenegger",
+    "We Got Ourselves a Movie",
+    "Didn't know what we had",
     "Janitors",
     "Childhood Trauma",
     "What Even Is This Movie",
@@ -30,6 +32,10 @@ const allAnswers = [
     "Automatic. Semi-automatic.",
     "Water Dogs",
     "I'm your dad",
+    "Police Special",
+    "Turkey",
+    "Kuffs",
+    "Wolfie",
     "Stanger Derail",
     "Kiss Stanger",
     "Chest Hair Jealousy",
@@ -42,7 +48,7 @@ const allAnswers = [
     "How's your mother"
 ]
 
-// create slugs for card classes from array
+// create slugs for card classes from array, will use this to add as classes to each card for custom css purposes
 const slugify = str =>
   str
     .toLowerCase()
@@ -81,11 +87,21 @@ function generateCards(answers) {
         card.className = "card";
         card.textContent = answerArray[i];
         card.classList.add(cardClass);
-        card.addEventListener("click", click => card.classList.toggle("clicked"));
         bingo.appendChild(card);
     });
 }
 
+// write cards to page
 generateCards(answerArray);
 
+// create a grid array, set it all to false
+const winCheckArray = new Array(25).fill(false);
+const allCardsArray = document.querySelectorAll(".card");
 
+function onClick() {
+    allCardsArray.forEach(card => {
+        card.addEventListener("click", click => card.classList.toggle("clicked"));
+    });
+}
+// trigger event listener
+onClick();
