@@ -23,7 +23,7 @@ const allAnswers = [
     "Pizza Parlor",
     "Market",
     "Gwildor",
-    "The Sauna",
+    "Toxic Masculinity",
     "Evian Bottle",
     "Gym Stories",
     "Doing some work for the movie",
@@ -72,7 +72,7 @@ function generateAnswerArray() {
         }        
     }
     // add the free space
-    answerArray.splice(12,0,"Toxic Masculinity")
+    answerArray.splice(12,0,"The Sauna")
     return answerArray;
 }
 const answerArray = generateAnswerArray();
