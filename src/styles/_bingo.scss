@@ -1,14 +1,26 @@
+.container {
+    width: 1500px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .bingo {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-gap: 10px;
 
+    @media screen and (max-width: $bp-sm) {
+        grid-gap: 0;
+    }
+
     .card {
         // background: $blue;
         border: 1px solid $white;
-        height: 20vh;
-        width: 20vw;
+        height: 100%;
+        width: 100%;
         max-width: 350px;
         display: flex;
         justify-content: center;
@@ -16,15 +28,27 @@
         padding: 20px;
         text-align: center;
 
+        @media screen and (max-width: $bp-sm) {
+            padding: 0;
+            min-width: 100%;
+            word-break: unset;
+            padding: 0 10px;
+        }
+
         &:nth-child(odd) {
             background: rgba(256, 256, 256, 0.2);
         }
+
         &:hover {
             cursor: pointer;
         }
 
         color: $white;
         font-size: 1.8rem;
+
+        @media screen and (max-width: $bp-sm) {
+            font-size: 0.6rem;
+        }
     }
 
     .card.clicked {
