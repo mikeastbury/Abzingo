@@ -27,7 +27,7 @@ const allAnswers = [
     "Evian Bottle",
     "Gym Stories",
     "Doing some work for the movie",
-    "Dog Crashes the Show",
+    
     "You can have it in wood...",
     "Automatic. Semi-automatic.",
     "Water Dogs",
